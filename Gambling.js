@@ -1,2 +1,2 @@
 let Utility = require("./Utility");
-Utility.checkWinOrLoose();
+console.log(Utility.checkWinOrLoose());

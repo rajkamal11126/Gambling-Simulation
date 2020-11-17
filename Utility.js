@@ -1,18 +1,28 @@
 class Gambling {
-    STAKE = 100;
-    BET = 1;
+
+    // To check random value
     randomCheck = () => {
         let rand = Math.floor(Math.random() * 10) % 2 + 1;
         return rand;
     }
 
+    // To check win or loose
     checkWinOrLoose = () => {
-        if(this.randomCheck() === 1){
-            console.log("Win");
+
+        //local variables
+        let STAKE = 100;
+        let BET = 1;
+        let lossLimit = STAKE / 2;
+        let winLimit = STAKE + lossLimit;
+        while (STAKE > lossLimit && STAKE < winLimit) {
+            if (this.randomCheck() === 1) {
+                STAKE = STAKE + BET;
+            }
+            else {
+                STAKE = STAKE - BET;
+            }
         }
-        else{
-            console.log("Loose");
-        }
+        return STAKE;
     }
 }
 module.exports = new Gambling();
