@@ -1,2 +1,2 @@
 let Utility = require("./Utility");
-Utility.multiplePlayer();
+Utility.checkWinOrLoose();
