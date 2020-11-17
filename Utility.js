@@ -12,7 +12,7 @@ class Gambling {
 
     // To check win or loose
     checkWinOrLoose = () => {
-        
+
         //local variables
         let lossLimit = this.STAKE / 2;
         let winLimit = this.STAKE + lossLimit;
