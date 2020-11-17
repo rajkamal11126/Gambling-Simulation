@@ -1,2 +1,3 @@
 let Utility = require("./Utility");
-console.log(Utility.checkWinOrLoose());
+//call the function 
+Utility.amountWinOrLost();
