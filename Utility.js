@@ -1,9 +1,11 @@
 class Gambling {
+
     //constant variables
     STAKE = 100;
     BET = 1;
     win = 0;
     loss = 0;
+
     // To check random value
     randomCheck = () => {
         let rand = Math.floor(Math.random() * 10) % 2 + 1;
@@ -31,12 +33,19 @@ class Gambling {
 
     //To calculate the loss and win amount for 20 days.
     amountWinOrLost = () => {
-        for (let i = 0; i < 20; i++) {
-            this.checkWinOrLoose();
-
+        let stakeRecord = 0;
+        let gamblingRecord = [];
+        for (let i = 1; i < 21; i++) {
+            console.log('Stake for day ' + i);
+            let dayAmount = this.checkWinOrLoose();
+            stakeRecord = stakeRecord + dayAmount;
+            console.log(gamblingRecord[i] = "dayAmount= " + dayAmount, "stakeRecord= " + stakeRecord);
         }
-        console.log('Winning amount for 20 days: ' + this.win);
-        console.log('loss amount for 20 days: ' + this.loss);
+
+
     }
+    // console.log('Winning amount for 20 days: ' + this.win);
+    // console.log('loss amount for 20 days: ' + this.loss);
+    //console.log(gamblingRecord);
 }
 module.exports = new Gambling();
